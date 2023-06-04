@@ -37,4 +37,6 @@ prof.h
 /blake3/test.py
 /blake3/test_vectors.json
 
+zig_hashes.a
+
 *.swp

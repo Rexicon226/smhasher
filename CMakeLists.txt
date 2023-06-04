@@ -718,6 +718,7 @@ add_library(
   )
 
 add_executable(SMHasher main.cpp)
+target_link_libraries(SMHasher ${CMAKE_SOURCE_DIR}/zig_hashes.a)
 
 if(ipo_supported)
   message(STATUS "IPO / LTO enabled")
