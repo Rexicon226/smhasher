@@ -58,6 +58,11 @@ static inline void zig_xxhash64_test(const void *key, int len, uint32_t seed, vo
   *(size_t *)out = zig_hash_xxhash64((uint64_t)seed, (const uint8_t *)key, len);
 }
 
+static inline void zig_xxhash3_test(const void *key, int len, uint32_t seed, void *out)
+{
+  *(size_t *)out = zig_hash_xxhash3((uint64_t)seed, (const uint8_t *)key, len);
+}
+
 static inline void zig_cityhash64_no_seed_test(const void *key, int len, uint32_t seed, void *out)
 {
   *(size_t *)out = zig_hash_cityhash64((const uint8_t *)key, len);

@@ -10,6 +10,7 @@ extern "C" {
 uint64_t zig_hash_wyhash(uint64_t const a0, uint8_t const *const a1, uintptr_t const a2);
 uint32_t zig_hash_xxhash32(uint32_t const a0, uint8_t const *const a1, uintptr_t const a2);
 uint64_t zig_hash_xxhash64(uint64_t const a0, uint8_t const *const a1, uintptr_t const a2);
+uint64_t zig_hash_xxhash3(uint64_t const a0, uint8_t const *const a1, uintptr_t const a2);
 uint32_t zig_hash_cityhash32(uint8_t const *const a0, uintptr_t const a1);
 uint64_t zig_hash_cityhash64(uint8_t const *const a0, uintptr_t const a1);
 uint32_t zig_hash_murmur2_32(uint8_t const *const a0, uintptr_t const a1);

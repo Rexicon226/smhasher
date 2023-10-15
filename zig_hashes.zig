@@ -12,6 +12,10 @@ export fn zig_hash_xxhash64(seed: u64, input: [*]const u8, len: usize) u64 {
     return std.hash.XxHash64.hash(seed, input[0..len]);
 }
 
+export fn zig_hash_xxhash3(seed: u64, input: [*]const u8, len: usize) u64 {
+    return std.hash.XxHash3.hash(seed, input[0..len]);
+}
+
 export fn zig_hash_cityhash32(input: [*]const u8, len: usize) u32 {
     return std.hash.CityHash32.hash(input[0..len]);
 }

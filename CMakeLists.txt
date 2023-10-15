@@ -13,6 +13,9 @@ endif()
 
 project(SMHasher C CXX ASM)
 
+# set(CMAKE_CXX_COMPILER clang++)
+# set(CMAKE_CC_COMPILER clang)
+
 include(CheckCCompilerFlag)
 # Check if the same compile family is used for both C and CXX
 if(NOT (CMAKE_C_COMPILER_ID STREQUAL CMAKE_CXX_COMPILER_ID))

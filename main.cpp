@@ -88,9 +88,10 @@ const char* quality_str[3] = { "SKIP", "POOR", "GOOD" };
 // marked with !! are known bad seeds, which either hash to 0 or create collisions.
 HashInfo g_hashes[] =
 {
-  { zig_wyhash_test,          64, 0xBD5E840C, "zig-wyhash", "zig wyhash v4.1 (64-bit)", GOOD, {}},
+  { zig_wyhash_test,          64, 0xBD5E840C, "zig-wyhash",      "zig wyhash v4.1 (64-bit)", GOOD, {}},
   { zig_xxhash32_test,        32, 0xBA88B743, "zig-xxHash32",    "zig xxHash, 32-bit for x86", POOR, {} },
   { zig_xxhash64_test,        64, 0x024B7CF4, "zig-xxHash64",    "zig xxHash, 64-bit", GOOD, {} },
+  { zig_xxhash3_test,         64, 0x9A636405, "zig-xxHash3",     "zig xxHash, 64-bit", GOOD, {} },
   { zig_cityhash64_no_seed_test, 64, 0x63FC6063, "zig-City64noSeed","zig Google CityHash64 without seed (default version, misses one final avalanche)", POOR, {} },
 
   // first the bad hash funcs, failing tests:
