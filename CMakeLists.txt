@@ -721,6 +721,22 @@ add_library(
   )
 
 add_executable(SMHasher main.cpp)
+
+# Zig
+# Build zig_hashes.a with zig build-lib
+add_custom_command(
+  OUTPUT zig_hashes.a
+  COMMAND zig build-lib zig_hashes.zig -O ReleaseFast -femit-bin=zig_hashes.a -fPIE
+  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+)
+
+add_custom_target(
+  build-zig
+  DEPENDS zig_hashes.a
+  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+)
+
+add_dependencies(SMHasher build-zig)
 target_link_libraries(SMHasher ${CMAKE_SOURCE_DIR}/zig_hashes.a)
 
 if(ipo_supported)
